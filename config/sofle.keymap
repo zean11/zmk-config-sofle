@@ -44,11 +44,11 @@
 
         lower_layer {
             bindings = <
-               &trans                 &kp F1            &kp F2             &kp F3          &kp F4           &kp F5                        &kp F6         &kp F7           &kp F8        &kp F9         &kp F10   &kp F11
-               &trans           &kp NUMBER_1      &kp NUMBER_2       &kp NUMBER_3    &kp NUMBER_4     &kp NUMBER_5                  &kp NUMBER_6   &kp NUMBER_7     &kp NUMBER_8  &kp NUMBER_9    &kp NUMBER_0   &kp F12
- &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE                     &kp TILDE      &kp EQUAL         &kp PLUS     &kp MINUS  &kp UNDERSCORE  &kp PIPE
-               &trans        &kp EXCLAMATION            &kp AT           &kp HASH      &kp DOLLAR      &kp PERCENT  &trans  &trans     &kp CARET  &kp AMPERSAND  &kp KP_MULTIPLY    &kp K_CALC   &kp BACKSLASH    &trans
-                                                        &trans             &trans          &trans           &trans  &trans  &trans        &trans         &trans           &trans        &trans
+    &trans           &kp F1        &kp F2        &kp F3          &kp F4        &kp F5                                &kp F6                 &kp F7            &kp F8             &kp F9         &kp F10          &kp F11
+    &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5                          &kp NUMBER_6           &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9    &kp NUMBER_0          &kp F12
+ &kp TILDE        &kp EQUAL      &kp PLUS     &kp MINUS  &kp UNDERSCORE      &kp PIPE                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE
+    &trans  &kp EXCLAMATION        &kp AT      &kp HASH      &kp DOLLAR   &kp PERCENT  &trans  &trans             &kp CARET          &kp AMPERSAND   &kp KP_MULTIPLY         &kp K_CALC   &kp BACKSLASH           &trans
+                                   &trans        &trans          &trans        &trans  &trans  &trans                &trans                 &trans            &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
