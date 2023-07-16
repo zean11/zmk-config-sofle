@@ -5,9 +5,9 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define BASE 0
@@ -32,11 +32,11 @@
 
         default_layer {
             bindings = <
- &kp GRAVE  &kp N1    &kp N2    &kp N3     &kp N4   &kp N5                         &kp N6     &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-   &kp TAB   &kp Q     &kp W     &kp E      &kp R    &kp T                          &kp Y      &kp U      &kp I     &kp O     &kp P   &kp BSPC
-   &kp ESC   &kp A     &kp S     &kp D      &kp F    &kp G                          &kp H      &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
- &kp LSHFT   &kp Z     &kp X     &kp C      &kp V    &kp B  &kp C_MUTE   &none      &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-                    &kp LGUI  &kp LALT  &kp RCTRL  &kp RET       &mo 1   &mo 2  &kp SPACE  &kp RCTRL   &kp RALT  &kp LGUI
+&kp GRAVE  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5                      &kp N6     &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
+  &kp TAB   &kp Q     &kp W     &kp E      &kp R      &kp T                       &kp Y      &kp U      &kp I     &kp O     &kp P   &kp BSPC
+  &kp ESC   &kp A     &kp S     &kp D      &kp F      &kp G                       &kp H      &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
+&kp LSHFT   &kp Z     &kp X     &kp C      &kp V      &kp B  &kp C_MUTE  &none    &kp N      &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+                   &kp LGUI  &kp LALT  &kp RCTRL  &kp SPACE       &mo 1  &mo 2  &kp RET  &kp RCTRL   &kp RALT  &kp LGUI
             >;
 
             sensor-bindings = <&inc_dec_kp A B &inc_dec_kp PG_UP PG_DN>;
@@ -44,11 +44,11 @@
 
         lower_layer {
             bindings = <
-   &kp F12           &kp F1        &kp F2        &kp F3          &kp F4        &kp F5                                &kp F6                 &kp F7            &kp F8             &kp F9         &kp F10          &kp F11
-    &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5                          &kp NUMBER_6           &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9    &kp NUMBER_0           &trans
- &kp TILDE        &kp EQUAL      &kp PLUS     &kp MINUS  &kp UNDERSCORE      &kp PIPE                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE
-    &trans  &kp EXCLAMATION        &kp AT      &kp HASH      &kp DOLLAR   &kp PERCENT  &trans  &trans             &kp CARET          &kp AMPERSAND   &kp KP_MULTIPLY         &kp K_CALC   &kp BACKSLASH           &trans
-                                   &trans        &trans          &trans        &trans  &trans  &trans                &trans                 &trans            &trans             &trans
+  &kp F12           &kp F1        &kp F2        &kp F3          &kp F4        &kp F5                                &kp F6                 &kp F7            &kp F8             &kp F9         &kp F10          &kp F11
+   &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5                          &kp NUMBER_6           &kp NUMBER_7      &kp NUMBER_8       &kp NUMBER_9    &kp NUMBER_0           &trans
+&kp TILDE        &kp EQUAL      &kp PLUS     &kp MINUS  &kp UNDERSCORE      &kp PIPE                  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE
+   &trans  &kp EXCLAMATION        &kp AT      &kp HASH      &kp DOLLAR   &kp PERCENT  &trans  &trans             &kp CARET          &kp AMPERSAND   &kp KP_MULTIPLY         &kp K_CALC   &kp BACKSLASH           &trans
+                                  &trans        &trans          &trans        &trans  &trans  &trans                &trans                 &trans            &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -56,11 +56,11 @@
 
         raise_layer {
             bindings = <
- &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans      &trans     &trans      &trans  &trans   &trans
-     &trans       &kp INS     &kp PSCRN   &kp K_CMENU        &trans        &trans                  &kp HOME   &kp PG_DN  &kp PG_UP     &kp END  &trans   &trans
-     &trans      &kp LALT     &kp LCTRL     &kp LSHFT        &trans      &kp CLCK                  &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT  &trans  &kp DEL
-     &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans    &trans  &kp C_PREV   &kp C_PP  &kp C_NEXT  &trans   &trans
-                                 &trans        &trans        &trans        &trans  &trans  &trans    &trans      &trans     &trans      &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans      &trans     &trans      &trans  &trans   &trans
+    &trans       &kp INS     &kp PSCRN   &kp K_CMENU        &trans        &trans                  &kp HOME   &kp PG_DN  &kp PG_UP     &kp END  &trans   &trans
+    &trans      &kp LALT     &kp LCTRL     &kp LSHFT        &trans      &kp CLCK                  &kp LEFT    &kp DOWN     &kp UP   &kp RIGHT  &trans  &kp DEL
+    &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans    &trans  &kp C_PREV   &kp C_PP  &kp C_NEXT  &trans   &trans
+                                &trans        &trans        &trans        &trans  &trans  &trans    &trans      &trans     &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -68,21 +68,21 @@
 
         Adjust_layer {
             bindings = <
-                      &bt BT_CLR     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                   &none   &none   &none   &none   &none   &none
- &ext_power EXT_POWER_TOGGLE_CMD  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF                   &none   &none   &none   &none   &none   &none
-                 &rgb_ug RGB_TOG  &rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR                   &none   &none   &none   &none   &none   &none
-                           &none            &none            &none            &none            &none            &none   &none   &none   &none   &none   &none   &none   &none   &none
-                                                             &none            &none            &none            &none   &none   &none   &none   &none   &none   &none
+                     &bt BT_CLR     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                &none  &none  &none  &none  &none  &none
+&ext_power EXT_POWER_TOGGLE_CMD  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF                &none  &none  &none  &none  &none  &none
+                &rgb_ug RGB_TOG  &rgb_ug RGB_SPD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR                &none  &none  &none  &none  &none  &none
+                          &none            &none            &none            &none            &none            &none  &none  &none  &none  &none  &none  &none  &none  &none
+                                                            &none            &none            &none            &none  &none  &none  &none  &none  &none  &none
             >;
         };
 
         Temp_Alt {
             bindings = <
-           &trans     &trans          &trans                &trans                 &trans     &trans                        &trans        &trans        &trans        &trans         &trans  &trans
-        &kp SLASH  &kp MINUS  &kp UNDERSCORE        &kp LEFT_BRACE        &kp RIGHT_BRACE  &kp TILDE                        &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0  &trans
-  &kp KP_MULTIPLY   &kp PLUS       &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE                        &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6          &none  &trans
- &kp K_CALCULATOR  &kp SLASH        &kp PIPE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET   &kp PIPE  &trans  &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH  &trans
-                                      &trans                &trans                 &trans     &trans  &trans  &trans        &trans        &trans        &trans        &trans
+          &trans     &trans          &trans                &trans                 &trans     &trans                        &trans        &trans        &trans        &trans         &trans  &trans
+       &kp SLASH  &kp MINUS  &kp UNDERSCORE        &kp LEFT_BRACE        &kp RIGHT_BRACE  &kp TILDE                        &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0  &trans
+ &kp KP_MULTIPLY   &kp PLUS       &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE                        &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6          &none  &trans
+&kp K_CALCULATOR  &kp SLASH        &kp PIPE      &kp LEFT_BRACKET      &kp RIGHT_BRACKET   &kp PIPE  &trans  &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH  &trans
+                                     &trans                &trans                 &trans     &trans  &trans  &trans        &trans        &trans        &trans        &trans
             >;
         };
     };
